@@ -1,3 +1,5 @@
+//name of month by it number
+
 import java.util.Scanner;
 
 public class NameOfMonth {
