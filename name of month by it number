@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class NameOfMonth {
+
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Enter number from 1 to 12: ");
+    while(scanner.hasNextInt() == false){
+      scanner.nextInt();
+      System.out.println("Enter number from 1 to 12: ");
+    }
+
+    int m = scanner.nextInt();
+    String[] MONTH = {"", "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                          "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+    System.out.println(MONTH[m]);
+  }
+}
