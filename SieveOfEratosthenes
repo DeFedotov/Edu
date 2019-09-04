@@ -1,0 +1,31 @@
+//explains how sieve of erathosthenes works
+
+public class Sieve {
+  public static void main(String[] args) {
+    int[] sieve = new int[10];
+
+    for (int i = 2; i * i < 10; i++ ){            //index of element
+      for (int k = i * i; k < 10; k = k + i){
+        sieve[k] = 1;
+      }
+    }
+
+    for (int i = 0; i < 10; i++){
+      System.out.print(i + " ");
+    }
+
+    System.out.println();
+
+    for (int i = 0; i < 10; i++){
+      System.out.print(sieve[i] + " ");         //value of element
+    }
+
+    System.out.println();
+
+    for (int i = 2; i < 10; i++){
+      if (sieve[i] == 0){
+        System.out.print(i + " ");
+      }
+    }
+  }
+}
